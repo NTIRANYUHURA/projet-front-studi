@@ -45,6 +45,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setBrowserSyncConfig({
     reloadDelay: 400
   });
+  eleventyConfig.addWatchTarget("./src/images/uploads");
+  eleventyConfig.addWatchTarget("admin");
 
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {
